@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>نادي الأمن السيبراني — تجربة توعوية</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&display=swap');
+
+    body {
+      margin: 0;
+      font-family: 'Cairo', sans-serif;
+      background: radial-gradient(circle at center, #0a0a0a 0%, #000000 100%);
+      color: #f1f5f9;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      background-image: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+      opacity: 0.15;
+      z-index: 0;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      padding: 20px 60px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(6px);
+      z-index: 5;
+    }
+
+    header img {
+      height: 100px;
+      filter: drop-shadow(0 0 15px #ef4444);
+      transition: 0.3s;
+    }
+
+    header img:hover {
+      transform: scale(1.05);
+    }
+
+    .container {
+      position: relative;
+      z-index: 3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 140px 20px 100px;
+    }
+
+    h1 {
+      color: #ef4444;
+      font-size: 2.8rem;
+      text-shadow: 0 0 25px #b91c1c;
+      margin-bottom: 10px;
+    }
+
+    p {
+      color: #f8fafc;
+      font-size: 1.1rem;
+      margin: 6px 0;
+      max-width: 650px;
+      line-height: 1.8;
+    }
+
+    .warning {
+      text-align: center;
+      font-size: 5rem;
+      font-weight: 700;
+      color: rgba(239,68,68,0.1);
+      letter-spacing: 10px;
+      text-transform: uppercase;
+      pointer-events: none;
+      animation: flicker 2s infinite;
+      z-index: 1;
+      margin-bottom: 30px;
+    }
+
+    @keyframes flicker {
+      0%, 100% { opacity: 0.3; }
+      50% { opacity: 0.7; }
+    }
+
+    /* ✅ القسم المقسوم */
+    .split-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 30px;
+      width: 90%;
+      max-width: 1000px;
+      margin-top: 40px;
+    }
+
+    .right-side, .left-side {
+      flex: 1;
+      min-width: 300px;
+      background: rgba(239,68,68,0.08);
+      border: 1px solid rgba(239,68,68,0.3);
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(239,68,68,0.2);
+      text-align: center;
+    }
+
+    .event-info {
+      background: rgba(239,68,68,0.1);
+      border: 1px solid #ef4444;
+      padding: 15px 25px;
+      border-radius: 12px;
+      margin-top: 20px;
+      box-shadow: 0 0 20px rgba(239,68,68,0.3);
+    }
+
+    .event-info p {
+      margin: 5px 0;
+      color: #fef2f2;
+      font-size: 1rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background: #ef4444;
+      color: #0f172a;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 12px;
+      box-shadow: 0 0 25px #ef4444;
+      transition: 0.3s;
+      text-align: center;
+      margin-top: 15px;
+      width: 80%;
+    }
+
+    .btn:hover {
+      background: #b91c1c;
+      transform: scale(1.05);
+      box-shadow: 0 0 35px #f87171;
+    }
+
+    .coupon {
+      background: #111;
+      border: 2px dashed #ef4444;
+      padding: 20px;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      color: #fef2f2;
+      box-shadow: 0 0 15px #ef4444;
+    }
+
+    .qr {
+      background: #fff;
+      padding: 8px;
+      border-radius: 12px;
+      width: 200px;
+      box-shadow: 0 0 25px #b91c1c;
+      margin-top: 15px;
+    }
+
+    footer {
+      text-align: center;
+      color: #64748b;
+      font-size: 0.9rem;
+      padding: 25px 0;
+      margin-top: 40px;
+      border-top: 1px solid rgba(239,68,68,0.2);
+      background: rgba(0, 0, 0, 0.6);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="download (1).png" alt="شعار نادي الأمن السيبراني" />
+    <img src="download.png" alt="شعار سايبرهب" />
+  </header>
+
+  <div class="container">
+    <div class="warning">⚠️ WARNING ⚠️</div>
+
+    <h1>لقد تم خداعك 😈</h1>
+    <p><strong>من قبل نادي الأمن السيبراني</strong></p>
+    <p>هذه تجربة توعوية توضّح كيف يتم استخدام <span style="color:#ef4444;font-weight:700;">الهندسة الاجتماعية</span> لخداع المستخدمين بطرق ذكية.</p>
+    <p>تعال لتعرف كيف تحمي نفسك من هذه الحيل 👇</p>
+
+    <!-- ✅ القسم المقسوم إلى جهتين -->
+    <div class="split-section">
+      <!-- القسم الأيمن -->
+      <div class="right-side">
+        <h2>🎓 ورشة الهندسة الاجتماعية</h2>
+        <div class="event-info">
+          <p>📍 <strong>المكان:</strong> مسرح كلية الحاسب للطالبات</p>
+          <p>📅 <strong>التاريخ:</strong> 7 / 10 / 2025</p>
+          <p>⏰ <strong>الوقت:</strong> من 10:30 إلى 11:30 صباحًا</p>
+          <p>👩‍💻 <strong>الورشة مخصصة:</strong> <span style="color:#ef4444;">للطالبات فقط</span></p>
+        </div>
+              <img class="qr" src="photo_2025-10-01_02-29-31.jpg" alt="QR متجر ريشة">
+        <a href="https://forms.gle/2Mz5FG1uKsqVuH2Y6" class="btn" target="_blank">🔒 سجّل في الورشة</a>
+
+    </div>
+
+      <!-- القسم الأيسر -->
+      <div class="left-side">
+        <h2>🎁 كوبون خصم متجر ريشة</h2>
+        <div class="coupon">
+          كود الخصم الخاص بك:<br>
+          <strong style="font-size:1.5rem; color:#ef4444;">ccsitcs</strong>
+        </div>
+        <p>امسح رمز QR لزيارة المتجر والاستفادة من الخصم 👇</p>
+        <img class="qr" src="reesha.jpg" alt="QR متجر ريشة">
+        <a href="https://reesha-store.com/" class="btn" target="_blank">🛍️ زيارة المتجر</a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    تجربة توعوية — نادي الأمن السيبراني © 2025  
+  </footer>
+</body>
+</html>
